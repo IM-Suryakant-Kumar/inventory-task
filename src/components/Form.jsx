@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { addItem } from "../utils";
 
 export const Form = ({ newItem, setNewItem, inventory, setInventory }) => {

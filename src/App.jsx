@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { addItem, editItem } from "./utils";
-import { Form } from "./components";
+import { editItem } from "./utils";
+import { Filters, Form } from "./components";
 
 function App() {
 	// State to manage inventory items
@@ -43,20 +43,13 @@ function App() {
 			/>
 
 			{/* Filter by category */}
-			<div className="filters">
-				<select onChange={(e) => setFilterCategory(e.target.value)} value={filterCategory}>
-					<option value="">All Categories</option>
-					{[...new Set(inventory.map((item) => item.category))].map((category) => (
-						<option key={category} value={category}>
-							{category}
-						</option>
-					))}
-				</select>
-
-				<button onClick={() => setSortAscending(!sortAscending)}>
-					Sort by Quantity ({sortAscending ? "Ascending" : "Descending"})
-				</button>
-			</div>
+			<Filters
+				filterCategory={filterCategory}
+				setFilterCategory={setFilterCategory}
+				inventory={inventory}
+				sortAscending={sortAscending}
+				setSortAscending={setSortAscending}
+			/>
 
 			{/* Inventory Table */}
 			<table className="inventory-table">
