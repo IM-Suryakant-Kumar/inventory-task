@@ -9,6 +9,8 @@ function App() {
 	]);
 
 	const [newItem, setNewItem] = useState({ name: "", category: "", quantity: "" });
+	const [filterCategory, setFilterCategory] = useState("");
+	const [sortAscending, setSortAscending] = useState(true);
 
 	// Add a new item to the inventory
 	const addItem = () => {
@@ -50,6 +52,22 @@ function App() {
 					onChange={(e) => setNewItem({ ...newItem, quantity: e.target.value })}
 				/>
 				<button onClick={addItem}>Add Item</button>
+			</div>
+
+			{/* Filter by category */}
+			<div className="filters">
+				<select onChange={(e) => setFilterCategory(e.target.value)} value={filterCategory}>
+					<option value="">All Categories</option>
+					{[...new Set(inventory.map((item) => item.category))].map((category) => (
+						<option key={category} value={category}>
+							{category}
+						</option>
+					))}
+				</select>
+
+				<button onClick={() => setSortAscending(!sortAscending)}>
+					Sort by Quantity ({sortAscending ? "Ascending" : "Descending"})
+				</button>
 			</div>
 		</main>
 	);

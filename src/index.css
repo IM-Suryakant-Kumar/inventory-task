@@ -1,10 +1,16 @@
+:root {
+  --primary-color: #ebf2fa;
+  --secondary-color: #cae9ff;
+  --logo-color: #007bff;
+}
+
 /* General styles */
 body {
 	font-family: Arial, sans-serif;
 	margin: 0;
 	padding: 0;
-	background-color: #f9f9f9;
-	color: #333;
+	background-color: var(--primary-color);
+	color: var(--logo-color);
 }
 
 main {
@@ -19,7 +25,7 @@ main {
 h1 {
 	text-align: center;
 	margin-bottom: 20px;
-	color: #007bff;
+	color: var(--logo-color);
 }
 
 /* Form styles */
@@ -39,7 +45,7 @@ h1 {
 
 .form button {
 	padding: 10px 20px;
-	background-color: #007bff;
+	background-color: var(--logo-color);
 	color: #fff;
 	border: none;
 	border-radius: 4px;
@@ -48,5 +54,32 @@ h1 {
 }
 
 .form button:hover {
-	background-color: #0056b3;
+	background-color: var(--logo-color);
+}
+
+/* Filters and actions */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filters select,
+.filters button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.filters button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.filters button:hover {
+  background-color: #0056b3;
 }
