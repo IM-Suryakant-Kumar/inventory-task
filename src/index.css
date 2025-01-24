@@ -89,6 +89,8 @@ h1 {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
+  overflow-x: auto;
+  display: block;
 }
 
 .inventory-table th,
@@ -99,7 +101,7 @@ h1 {
 }
 
 .inventory-table th {
-  background-color: var(--logo-color);
+  background-color: #007bff;
   color: #fff;
 }
 
@@ -113,6 +115,12 @@ h1 {
 }
 
 /* Responsive design */
+@media screen and (min-width: 768px) {
+  .inventory-table {
+    display: table;
+  }
+}
+
 @media (max-width: 600px) {
   .form {
     flex-direction: column;
