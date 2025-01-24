@@ -73,10 +73,17 @@ This is a simple and responsive Inventory Management application built with **Re
 ## Screenshots
 
 ### Desktop View
-![Desktop Screenshot](#)
+![Desktop-version](https://github.com/user-attachments/assets/29d007dc-0505-4f9a-a6b3-f05134d33568)
 
 ### Mobile View
-![Mobile Screenshot](#)
+![mobile-version](https://github.com/user-attachments/assets/09a083d4-9bf8-475f-9b28-6650d96eeb94)
+
+### Demo Video
+
+
+https://github.com/user-attachments/assets/71a49bcf-cffa-40a4-b654-1ed86c4480ea
+
+
 
 ---
 
